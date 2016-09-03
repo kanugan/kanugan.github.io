@@ -28,6 +28,10 @@ var method_click_scroll = function(e) {
 };
 
 var main = function() {
+  /* ADDING SWIPE SUPPORT FOR MOBILE DEVICES */
+  $('.carousel').bcSwipe({ threshold: 50 });
+  /* End ADDING SWIPE SUPPORT */
+
   /* UPDATE NAV */
   method_update_nav();
   $(window).resize(method_update_nav);
@@ -71,6 +75,9 @@ var main = function() {
   $('body').scrollspy({
     target: '.navbar-fixed-top'
   })
+
+
+
 };
 
 $(document).ready(main);
